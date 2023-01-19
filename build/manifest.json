@@ -1,0 +1,16 @@
+{
+  "public/images/pesan/pesan-bg.png": {
+    "file": "assets/pesan-bg-5d382903.png",
+    "src": "public/images/pesan/pesan-bg.png"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-9a3e6da2.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-466ce093.js",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}

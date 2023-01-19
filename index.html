@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pappo Studio Bontang</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Tangerine:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="build/assets/app-9a3e6da2.css" />
+    <script src="build/assets/app-466ce093.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/swiperjs/swiper-bundle.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="w-full top-0 z-50 fixed text-white transition duration-300" id="header">
+        <nav class="py-4">
+            <div x-data="{ showMenu: false }" class="wrapper mx-auto flex justify-between h-14">
+                <!-- Brand-->
+                <div class="flex items-center cursor-pointer">
+                    <!-- Logo-->
+                    <div class="text-[#ECE4DB] font-bold font-logo text-[2.7rem] ml-2">
+                        Pappo Studio.
+                    </div>
+                </div>
+                <!-- Navbar Toggle Button -->
+                <button id="btn-toggle" @click="showMenu = !showMenu"
+                    class="block md:hidden text-white p-2 rounded my-2 mr-5" type="button" aria-controls="navbar-main"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <svg class="w-5 h-5" :class="{ 'hidden': showMenu, '': !showMenu }" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg class="w-5 h-5" :class="{ '': showMenu, 'hidden': !showMenu }" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z">
+                        </path>
+                    </svg>
+                </button>
+                <!-- Nav Links-->
+                <ul class="md:flex text-base mr-3 origin-top text-[#ECE4DB]"
+                    :class="{ 'block absolute top-20 left-0 bg-[#9D8189] w-full p-2': showMenu, 'hidden': !showMenu }"
+                    id="navbar-main" x-cloak>
+                    <li class="text-center cursor-pointer flex items-center justify-center hover:bg-[#ECE4DB] transition duration-200 hover:text-[#9D8189]"
+                        :class="showMenu && ''">
+                        <a href="#home" class="p-3 w-full">Home</a>
+                    </li>
+                    <li class="text-center cursor-pointer flex items-center justify-center hover:bg-[#ECE4DB] transition duration-200 hover:text-[#9D8189]"
+                        :class="showMenu && ''">
+                        <a href="#about" class="p-3 w-full">About</a>
+                    </li>
+                    <li class="text-center cursor-pointer flex items-center justify-center hover:bg-[#ECE4DB] transition duration-200 hover:text-[#9D8189]"
+                        :class="showMenu && ''">
+                        <a href="#portfolio" class="p-3 w-full">Portfolio</a>
+                    </li>
+                    <li class="text-center cursor-pointer flex items-center justify-center hover:bg-[#ECE4DB] transition duration-200 hover:text-[#9D8189]"
+                        :class="showMenu && ''">
+                        <a href="#pricing" class="p-3 w-full">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <div class="homeSwiper">
+                <div class="swiper-wrapper">
+                    <div
+                        class="swiper-slide hero-body min-h-screen w-full absolute bg-gradient-to-tr from-[#ECE4DB] to-[#A68C94]">
+                        <img src="images/header/header1.png" alt=""
+                            class="hero-body-img h-screen w-full object-cover opacity-20" />
+                    </div>
+
+                    <div
+                        class="swiper-slide hero-body min-h-screen w-full absolute bg-gradient-to-tr from-[#ECE4DB] to-[#A68C94]">
+                        <img src="images/header/header2.png" alt=""
+                            class="hero-body-img h-screen w-full object-cover opacity-20" />
+                    </div>
+
+                    <div
+                        class="swiper-slide hero-body min-h-screen w-full absolute bg-gradient-to-tr from-[#ECE4DB] to-[#A68C94]">
+                        <img src="images/header/header3.png" alt=""
+                            class="hero-body-img h-screen w-full object-cover opacity-20" />
+                    </div>
+                </div>
+            </div>
+            <div class="text-white wrapper absolute top-0 left-0 right-0 bottom-0 m-auto z-10">
+                <div class="lg:w-3/5 flex justify-center flex-col h-full">
+                    <h1
+                        class="font-logo text-6xl md:text-7xl lg:text-8xl font-bold decoration-white/50 m-0 drop-shadow-md">
+                        Pappo Studio.</h1>
+                    <p class="text-lg md:text-xl lg:text-2xl drop-shadow-md mb-10 mt-4">Abadikan setiap momen bahagiamu
+                        bersama orang
+                        terdekat hanya
+                        di
+                        <span class="font-logo font-bold text-2xl md:text-3xl lg:text-4xl">Pappo
+                            Studio</span>.
+                    </p>
+                    <div class="scale-100 hover:scale-110 mr-auto duration-500 ease-in-out">
+                        <a href="#pricing"
+                            class="bg-[#9D8189] px-6 py-3 rounded-md hover:bg-[#ECE4DB] hover:text-[#9D8189]">Pesan
+                            Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <article class="w-full h-auto pt-32 pb-16 text-center bg-[#ECE4DB]" id="about">
+            <section class="wrapper about">
+                <header class="w-full flex justify-center">
+                    <h1
+                        class="font-logo font-bold text-4xl md:text-5xl text-[#9D8189]/80 w-1/3 md:w-1/4 lg:w-1/5 border-b-2 border-[#9D8189]/20 drop-shadow shadow-black py-2">
+                        About Us
+                    </h1>
+                </header>
+                <div class="flex justify-start items-center gap-2 py-10 group relative">
+                    <div class="w-11/12 lg:w-full h-full relative z-10 scale-95 group-hover:scale-100 duration-300"
+                        data-aos="fade-up" data-aos-duration="1200">
+                        <img src="images/about/about.png" alt=""
+                            class="h-64 md:h-[25rem] lg:h-[30rem] w-full object-cover object-center rounded-md shadow-md">
+                        <div class="bg-[#9D8189]/50 h-full w-full absolute top-0 rounded-md shadow-md"></div>
+                    </div>
+                    <div class="bg-[#9D8189]/90 text-white absolute right-0 lg:left-0 lg:m-auto bottom-0 w-11/12 z-10 p-4 rounded-lg shadow-md lg:py-12 lg:w-9/12"
+                        data-aos="fade-down" data-aos-duration="1000">
+                        <h2 class="font-bold font-logo text-3xl md:text-4xl my-2">Pappo Studio.</h2>
+                        <p class="text-sm font-light md:text-lg">Pappo Studio adalah salah satu studio foto yang berada
+                            pada
+                            kota bontang.
+                            Pappo Studio juga merupakan
+                            salah satu wedding photographer terbaik yang ada di kota bontang.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-[#A68C94] services mt-24 py-10">
+                <div class="wrapper">
+                    <header class="w-full flex justify-center">
+                        <h1
+                            class="font-logo font-bold text-3xl md:text-4xl text-[#FFE5D9] w-1/3 md:w-1/4 lg:w-1/5 border-b-2 border-[#FFE5D9]/50 drop-shadow shadow-black">
+                            Our Services
+                        </h1>
+                    </header>
+                    <div class="swiper serviceSwiper" data-aos="fade-left" data-aos-duration="700">
+                        <div class="swiper-wrapper py-4">
+                            <div class="swiper-slide relative group transition">
+                                <figure><img src="images/service/service1.png" alt=""
+                                        class="rounded-md w-full h-96 object-cover object-top duration-700 ease-in-out scale-90 md:scale-95 group-hover:scale-95 md:group-hover:scale-100" />
+                                    <div
+                                        class="bg-[#A68C94]/20 h-full w-full absolute top-0 duration-700 ease-in-out scale-90 md:scale-95 group-hover:scale-95 md:group-hover:scale-100 rounded-md">
+                                    </div>
+                                </figure>
+                                <div
+                                    class="card-body absolute text-center bg-[#ECE4DB]/80 h-full w-full py-4 px-6 flex flex-col justify-center text-[#A68C94] -bottom-[1000px] group-hover:bottom-0 scale-0 group-hover:scale-95 md:group-hover:scale-100 duration-500 ease-in-out rounded-md">
+                                    <h2 class="font-logo font-bold text-5xl">Pernikahan</h2>
+                                    <p class="text-sm leading-tight my-2">Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing
+                                        elit.</p>
+                                    <a href="">
+                                        <button
+                                            class="border border-[#9D8189] text-sm hover:border-[#9D8189] hover:text-[#ECE4DB] px-3 py-1 rounded-lg transition ease-in-out hover:scale-105 duration-150 hover:bg-[#9D8189]">selengkapnya</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide relative group transition">
+                                <figure><img src="images/service/service2.png" alt=""
+                                        class="rounded-md w-full h-96 object-cover object-top duration-700 ease-in-out scale-90 md:scale-95 group-hover:scale-95 md:group-hover:scale-100" />
+                                    <div
+                                        class="bg-[#A68C94]/20 h-full w-full absolute top-0 duration-700 ease-in-out scale-90 md:scale-95 group-hover:scale-95 md:group-hover:scale-100 rounded-md">
+                                    </div>
+                                </figure>
+                                <div
+                                    class="card-body absolute text-center bg-[#ECE4DB]/80 h-full w-full py-4 px-6 flex flex-col justify-center text-[#A68C94] -bottom-[1000px] group-hover:bottom-0 scale-0 group-hover:scale-95 md:group-hover:scale-100 duration-500 ease-in-out rounded-md">
+                                    <h2 class="font-logo font-bold text-5xl">Wisuda</h2>
+                                    <p class="text-sm leading-tight my-2">Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing
+                                        elit.</p>
+                                    <a href="">
+                                        <button
+                                            class="border border-[#9D8189] text-sm hover:border-[#9D8189] hover:text-[#ECE4DB] px-3 py-1 rounded-lg transition ease-in-out hover:scale-105 duration-150 hover:bg-[#9D8189]">selengkapnya</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide relative group transition">
+                                <figure><img src="images/service/service3.png" alt=""
+                                        class="rounded-md w-full h-96 object-cover object-top duration-700 ease-in-out scale-90 md:scale-95 group-hover:scale-95 md:group-hover:scale-100" />
+                                    <div
+                                        class="bg-[#A68C94]/20 h-full w-full absolute top-0 duration-700 ease-in-out scale-90 md:scale-95 group-hover:scale-95 md:group-hover:scale-100 rounded-md">
+                                    </div>
+                                </figure>
+                                <div
+                                    class="card-body absolute text-center bg-[#ECE4DB]/80 h-full w-full py-4 px-6 flex flex-col justify-center text-[#A68C94] -bottom-[1000px] group-hover:bottom-0 scale-0 group-hover:scale-95 md:group-hover:scale-100 duration-500 ease-in-out rounded-md">
+                                    <h2 class="font-logo font-bold text-5xl">Aqiqah</h2>
+                                    <p class="text-sm leading-tight my-2">Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing
+                                        elit.</p>
+                                    <a href="">
+                                        <button
+                                            class="border border-[#9D8189] text-sm hover:border-[#9D8189] hover:text-[#ECE4DB] px-3 py-1 rounded-lg transition ease-in-out hover:scale-105 duration-150 hover:bg-[#9D8189]">selengkapnya</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide relative group transition">
+                                <figure><img src="images/service/service4.png" alt=""
+                                        class="rounded-md w-full h-96 object-cover object-top duration-700 ease-in-out scale-90 md:scale-95 group-hover:scale-95 md:group-hover:scale-100" />
+                                    <div
+                                        class="bg-[#A68C94]/20 h-full w-full absolute top-0 duration-700 ease-in-out scale-90 md:scale-95 group-hover:scale-95 md:group-hover:scale-100 rounded-md">
+                                    </div>
+                                </figure>
+                                <div
+                                    class="card-body absolute text-center bg-[#ECE4DB]/80 h-full w-full py-4 px-6 flex flex-col justify-center text-[#A68C94] -bottom-[1000px] group-hover:bottom-0 scale-0 group-hover:scale-95 md:group-hover:scale-100 duration-500 ease-in-out rounded-md">
+                                    <h2 class="font-logo font-bold text-5xl">Studio</h2>
+                                    <p class="text-sm leading-tight my-2">Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing
+                                        elit.</p>
+                                    <a href="">
+                                        <button
+                                            class="border border-[#9D8189] text-sm hover:border-[#9D8189] hover:text-[#ECE4DB] px-3 py-1 rounded-lg transition ease-in-out hover:scale-105 duration-150 hover:bg-[#9D8189]">selengkapnya</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-[#ECE4DB] services my-6 py-10">
+                <div class="wrapper">
+                    <header class="w-full flex justify-center">
+                        <h1
+                            class="font-logo font-bold text-3xl md:text-4xl text-[#9D8189]/80 w-1/3 md:w-1/4 lg:w-1/5 border-b-2 border-[#9D8189]/20 drop-shadow shadow-black">
+                            Our Teams
+                        </h1>
+                    </header>
+                    <section
+                        class="w-full flex flex-wrap justify-center lg:justify-evenly gap-6 items-center mt-6 text-[#9D8189] cursor-pointer transition duration-300"
+                        data-aos="fade-right" data-aos-duration="700">
+                        <div
+                            class="w-1/2 md:w-2/5 lg:w-1/4 flex flex-col items-center p-2 border-b-2 border-[#9D8189]/40 transition duration-300 scale-95 hover:scale-100 hover:shadow-md hover:rounded-lg">
+                            <img src="images/teams/pappo1.png" alt=""
+                                class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-md shadow-[#9D8189]">
+                            <h2 class="font-bold text-lg mt-4">Rachman</h2>
+                            <p class="text-sm m-0">Founder - Photographer</p>
+                        </div>
+                        <div
+                            class="w-1/2 md:w-2/5 lg:w-1/4 flex flex-col items-center p-2 border-b-2 border-[#9D8189]/40 transition duration-300 scale-95 hover:scale-100 hover:shadow-md hover:rounded-lg">
+                            <img src="images/teams/pappo2.png" alt=""
+                                class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-md shadow-[#9D8189]">
+                            <h2 class="font-bold text-lg mt-4">Rahmat</h2>
+                            <p class="text-sm m-0">Photographer - Videographer</p>
+                        </div>
+                        <div
+                            class="w-1/2 md:w-2/5 lg:w-1/4 flex flex-col items-center p-2 border-b-2 border-[#9D8189]/40 transition duration-300 scale-95 hover:scale-100 hover:shadow-md hover:rounded-lg">
+                            <img src="images/teams/pappo3.png" alt=""
+                                class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-md shadow-[#9D8189]">
+                            <h2 class="font-bold text-lg mt-4">Sapta</h2>
+                            <p class="text-sm m-0">Web Developer</p>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </article>
+        <section class="w-full h-auto py-32 text-center bg-[#A68C94]" id="portfolio">
+            <div class="wrapper">
+                <header class="w-full flex justify-center">
+                    <h1
+                        class="font-logo font-bold text-4xl md:text-5xl text-[#FFE5D9]/80 w-1/3 md:w-1/4 lg:w-1/5 border-b-2 border-[#FFE5D9]/50 drop-shadow shadow-black py-2">
+                        Portfolio
+                    </h1>
+                </header>
+                <div class="w-full grid grid-cols-2 lg:grid-cols-3 gap-2 justify-start items-center relative py-6"
+                    id="port" data-aos="fade-up" data-aos-duration="1200">
+
+                    <a href="images/portfolio/1.png" class="w-full h-full relative z-10 group">
+                        <img src="images/portfolio/1.png" alt=""
+                            class="h-52 w-full object-cover object-center rounded-md shadow-md duration-500 ease-in-out scale-95 group-hover:scale-100">
+                        <div
+                            class="bg-[#9D8189]/20 h-full w-full absolute top-0 rounded-md shadow-md duration-500 ease-in-out scale-95 group-hover:scale-100">
+                        </div>
+                    </a>
+
+                    <a href="images/portfolio/2.png" class="w-full h-full relative z-10 group">
+                        <img src="images/portfolio/2.png" alt=""
+                            class="h-52 w-full object-cover object-center rounded-md shadow-md duration-500 ease-in-out scale-95 group-hover:scale-100">
+                        <div
+                            class="bg-[#9D8189]/20 h-full w-full absolute top-0 rounded-md shadow-md duration-500 ease-in-out scale-95 group-hover:scale-100">
+                        </div>
+                    </a>
+
+                    <a href="images/portfolio/3.png" class="w-full h-full relative z-10 group">
+                        <img src="images/portfolio/3.png" alt=""
+                            class="h-52 w-full object-cover object-center rounded-md shadow-md duration-500 ease-in-out scale-95 group-hover:scale-100">
+                        <div
+                            class="bg-[#9D8189]/20 h-full w-full absolute top-0 rounded-md shadow-md duration-500 ease-in-out scale-95 group-hover:scale-100">
+                        </div>
+                    </a>
+
+                    <a href="images/portfolio/4.png" class="w-full h-full relative z-10 group">
+                        <img src="images/portfolio/4.png" alt=""
+                            class="h-52 w-full object-cover object-center rounded-md shadow-md duration-500 ease-in-out scale-95 group-hover:scale-100">
+                        <div
+                            class="bg-[#9D8189]/20 h-full w-full absolute top-0 rounded-md shadow-md duration-500 ease-in-out scale-95 group-hover:scale-100">
+                        </div>
+                    </a>
+
+                    <a href="images/portfolio/5.png" class="w-full h-full relative z-10 group">
+                        <img src="images/portfolio/5.png" alt=""
+                            class="h-52 w-full object-cover object-center rounded-md shadow-md duration-500 ease-in-out scale-95 group-hover:scale-100">
+                        <div
+                            class="bg-[#9D8189]/20 h-full w-full absolute top-0 rounded-md shadow-md duration-500 ease-in-out scale-95 group-hover:scale-100">
+                        </div>
+                    </a>
+
+                    <a href="images/portfolio/6.png" class="w-full h-full relative z-10 group">
+                        <img src="images/portfolio/6.png" alt=""
+                            class="h-52 w-full object-cover object-center rounded-md shadow-md duration-500 ease-in-out scale-95 group-hover:scale-100">
+                        <div
+                            class="bg-[#9D8189]/20 h-full w-full absolute top-0 rounded-md shadow-md duration-500 ease-in-out scale-95 group-hover:scale-100">
+                        </div>
+                    </a>
+
+                </div>
+                <a href="https://www.instagram.com/pappo.photographybontang/?hl=id" target="_blank">
+                    <button
+                        class="px-6 py-2 border border-[#FFE5D9] rounded-md bg-[#FFE5D9] text-[#A68C94] hover:bg-[#A68C94] hover:text-[#FFE5D9] hover:border-[#FFE5D9] duration-300 ease-in-out scale-95 hover:scale-100 shadow">View
+                        More</button>
+                </a>
+            </div>
+        </section>
+        <article class="w-full h-auto pt-32 text-center bg-[#ECE4DB]" id="pricing">
+            <section class="wrapper about pb-32">
+                <header class="w-full flex justify-center">
+                    <h1
+                        class="font-logo font-bold text-4xl md:text-5xl text-[#9D8189]/80 w-1/3 md:w-1/4 lg:w-1/5 border-b-2 border-[#9D8189]/20 drop-shadow shadow-black py-2 mb-6">
+                        Pricing
+                    </h1>
+                </header>
+                <div class="lg:max-w-screen-lg w-4/5 md:w-full mx-auto h-full flex flex-wrap md:flex-nowrap md:items-center my-4 gap-6"
+                    data-aos="fade-down" data-aos-duration="1200">
+                    <div
+                        class="w-full h-full py-14 rounded-md border-2 border-[#9D8189]/50 shadow scale-100 hover:scale-105 transition duration-300 hover:shadow-md">
+                        <h2 class="font-medium uppercase text-[#9D8189]">Basic</h2>
+                        <p class="my-4 font-semibold text-2xl text-[#9d8189]">Rp. 3.000.000</p>
+                        <ul class="mb-6">
+                            <li class="py-1 w-3/5 md:w-full mx-auto text-[#9d8189]"><i class='bx bx-chevron-right'></i>
+                                Photography</li>
+                            <li class="py-1 w-3/5 md:w-full mx-auto text-[#9d8189]"><i class='bx bx-chevron-right'></i>
+                                Bribe Makeup</li>
+                            <li class="py-1 w-3/5 md:w-full mx-auto text-[#9d8189]"><i class='bx bx-chevron-right'></i>
+                                Wedding Ceromony</li>
+                            <li class="py-1 w-3/5 md:w-full mx-auto text-[#9d8189]"><i class='bx bx-chevron-right'></i>
+                                Meals & Drinks</li>
+                            <li class="py-1 w-3/5 md:w-full mx-auto text-[#9d8189]"><i class='bx bx-chevron-right'></i>
+                                Guest Invitations</li>
+
+                        </ul>
+
+                        <a href="pesan.html"
+                            class="text-[#9D8189] border border-[#9D8189] px-4 py-2 rounded-md hover:bg-[#9D8189] transition duration-200 hover:text-[#ECE4DB]">Choose
+                            Plan</a>
+                    </div>
+                    <div
+                        class="relative w-full h-full py-28 rounded-md bg-[#9D8189] text-white shadow scale-100 hover:scale-105 transition duration-300 hover:shadow-md">
+                        <div
+                            class="w-1/2 md:w-3/4 lg:w-1/2 absolute top-4 right-0 bg-[#ECE4DB] text-[#9D8189] py-2 text-xs font-semibold uppercase shadow-lg pl-6">
+                            Recomended
+                            <i class='bx bxs-right-arrow bx-lg -left-4 -top-2 absolute'></i>
+                        </div>
+                        <h2 class="font-medium uppercase text-[#ECE4DB]">Premium</h2>
+                        <p class="my-4 font-semibold text-2xl text-[#ECE4DB]">Rp. 5.000.000</p>
+                        <ul class="mb-6">
+                            <li class="py-1 w-3/5 md:w-full mx-auto text-[#ECE4DB]"><i class='bx bx-chevron-right'></i>
+                                Photography</li>
+                            <li class="py-1 w-3/5 md:w-full mx-auto text-[#ECE4DB]"><i class='bx bx-chevron-right'></i>
+                                Bribe Makeup</li>
+                            <li class="py-1 w-3/5 md:w-full mx-auto text-[#ECE4DB]"><i class='bx bx-chevron-right'></i>
+                                Wedding Ceromony</li>
+                            <li class="py-1 w-3/5 md:w-full mx-auto text-[#ECE4DB]"><i class='bx bx-chevron-right'></i>
+                                Meals & Drinks</li>
+                            <li class="py-1 w-3/5 md:w-full mx-auto text-[#ECE4DB]"><i class='bx bx-chevron-right'></i>
+                                Guest Invitations</li>
+                        </ul>
+
+                        <a href="pesan.html"
+                            class="text-[#ECE4DB] border border-[#ECE4DB] px-4 py-2 rounded-md hover:bg-[#ECE4DB] transition duration-200 hover:text-[#9D8189]">Choose
+                            Plan</a>
+                    </div>
+                    <div
+                        class="w-full h-full py-14 rounded-md border-2 border-[#9D8189]/50 shadow scale-100 hover:scale-105 transition duration-300 hover:shadow-md">
+                        <h2 class="font-medium uppercase text-[#9D8189]">Ultimate</h2>
+                        <p class="my-4 font-semibold text-2xl text-[#9d8189]">Rp. 7.000.000</p>
+                        <ul class="mb-6">
+                            <li class="py-1 w-3/5 md:w-full mx-auto text-[#9d8189]"><i class='bx bx-chevron-right'></i>
+                                Photography</li>
+                            <li class="py-1 w-3/5 md:w-full mx-auto text-[#9d8189]"><i class='bx bx-chevron-right'></i>
+                                Bribe Makeup</li>
+                            <li class="py-1 w-3/5 md:w-full mx-auto text-[#9d8189]"><i class='bx bx-chevron-right'></i>
+                                Wedding Ceromony</li>
+                            <li class="py-1 w-3/5 md:w-full mx-auto text-[#9d8189]"><i class='bx bx-chevron-right'></i>
+                                Meals & Drinks</li>
+                            <li class="py-1 w-3/5 md:w-full mx-auto text-[#9d8189]"><i class='bx bx-chevron-right'></i>
+                                Guest Invitations</li>
+                        </ul>
+
+                        <a href="pesan.html"
+                            class="text-[#9D8189] border border-[#9D8189] px-4 py-2 rounded-md hover:bg-[#9D8189] transition duration-200 hover:text-[#ECE4DB]">Choose
+                            Plan</a>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-[#A68C94] testimoni pt-28 h-full">
+                <div class="wrapper pb-16">
+                    <header class="w-full flex justify-center">
+                        <h1
+                            class="font-logo font-bold text-4xl md:text-5xl text-[#FFE5D9]/80 w-1/3 md:w-1/4 lg:w-1/5 border-b-2 border-[#FFE5D9]/50 drop-shadow shadow-black py-2">
+                            Testimoni
+                        </h1>
+                    </header>
+                    <div class="swiper testiSwiper" data-aos="fade-right" data-aos-duration="1200">
+                        <div class="swiper-wrapper pt-10">
+                            <div class="swiper-slide">
+                                <div
+                                    class="text-left bg-[#9D8189] min-h-[25rem] w-full p-6 flex flex-col gap-4 text-[#FFE5D9] rounded-md">
+                                    <i class='bx bxs-quote-right bx-sm'></i>
+                                    <p class="text-sm leading-tight capitalize">papoto
+                                        andalang! ngehire dia sama aja dapat keluarga baru, ramah dan kreatif. orang
+                                        dapur gini pasti akrab sama dia! sudah poto di studionya kah pok? ajak sudah
+                                        temanmu kesana bakupoto rame2. buat kenang2an 2020!</p>
+                                    <p class="text-xs leading-tight capitalize"><i class='bx bx-minus p-1'></i> hermi
+                                        syafruddin</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div
+                                    class="text-left bg-[#9D8189] min-h-[25rem] w-full p-6 flex flex-col gap-4 text-[#FFE5D9] rounded-md">
+                                    <i class='bx bxs-quote-right bx-sm'></i>
+                                    <p class="text-sm leading-tight capitalize">pakai jasa papo karena hasilnya
+                                        memuaskan. ownernya baik hati, humble, dan kece.</p>
+                                    <p class="text-xs leading-tight capitalize"><i class='bx bx-minus p-1'></i>
+                                        guslelyana</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div
+                                    class="text-left bg-[#9D8189] min-h-[25rem] w-full p-6 flex flex-col gap-4 text-[#FFE5D9] rounded-md">
+                                    <i class='bx bxs-quote-right bx-sm'></i>
+                                    <p class="text-sm leading-tight capitalize">hasilnya parah sih ajeb benar, ramah
+                                        banget orangnya pokoknya ah mantaps</p>
+                                    <p class="text-xs leading-tight capitalize"><i class='bx bx-minus p-1'></i> wulan
+                                        ramadani</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div
+                                    class="text-left bg-[#9D8189] min-h-[25rem] w-full p-6 flex flex-col gap-4 text-[#FFE5D9] rounded-md">
+                                    <i class='bx bxs-quote-right bx-sm'></i>
+                                    <p class="text-sm leading-tight capitalize">ownernya ramah, baiknya luar biasa,
+                                        kalau sudah foto nda mau berhenti + hasil foto ok banget</p>
+                                    <p class="text-xs leading-tight capitalize"><i class='bx bx-minus p-1'></i> fitri
+                                        kurnia</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div
+                                    class="text-left bg-[#9D8189] min-h-[25rem] w-full p-6 flex flex-col gap-4 text-[#FFE5D9] rounded-md">
+                                    <i class='bx bxs-quote-right bx-sm'></i>
+                                    <p class="text-sm leading-tight capitalize">ownernya ramah! hasilnya memuaskan,
+                                        langganan sekeluarga</p>
+                                    <p class="text-xs leading-tight capitalize"><i class='bx bx-minus p-1'></i> eva
+                                        aryandini</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer class="w-full h-full bg-[#7d6169]">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#A68C94" fill-opacity="1"
+                d="M0,32L18.5,69.3C36.9,107,74,181,111,197.3C147.7,213,185,171,222,160C258.5,149,295,171,332,186.7C369.2,203,406,213,443,192C480,171,517,117,554,117.3C590.8,117,628,171,665,186.7C701.5,203,738,181,775,149.3C812.3,117,849,75,886,96C923.1,117,960,203,997,202.7C1033.8,203,1071,117,1108,96C1144.6,75,1182,117,1218,165.3C1255.4,213,1292,267,1329,240C1366.2,213,1403,107,1422,53.3L1440,0L1440,0L1421.5,0C1403.1,0,1366,0,1329,0C1292.3,0,1255,0,1218,0C1181.5,0,1145,0,1108,0C1070.8,0,1034,0,997,0C960,0,923,0,886,0C849.2,0,812,0,775,0C738.5,0,702,0,665,0C627.7,0,591,0,554,0C516.9,0,480,0,443,0C406.2,0,369,0,332,0C295.4,0,258,0,222,0C184.6,0,148,0,111,0C73.8,0,37,0,18,0L0,0Z">
+            </path>
+        </svg>
+        <div class="bg-[#7d6169] w-full">
+            <div class="wrapper py-10 flex flex-col md:flex-row items-center justify-between text-[#FFE5D9]">
+                <div class="w-full md:w-4/5 px-10 md:px-4 lg:px-10 p-0 md:py-4 flex flex-col justify-between gap-4">
+                    <h1 class="font-logo font-bold text-6xl">Pappo Studio.</h1>
+                    <p class="my-2 font-light">Pappo Studio adalah salah satu studio foto yang berada pada kota bontang.
+                        Pappo Studio
+                        juga merupakan
+                        salah satu wedding photographer terbaik yang ada di kota bontang.</p>
+                    <a href="https://wa.me/6282357995995" target="_blank" class="flex gap-1 font-light"><i
+                            class='bx bxl-whatsapp bx-sm'></i> 0823-57-995-995</a>
+                </div>
+                <div
+                    class="w-full md:1/3 px-10 md:px-4 lg:px-52 p-0 md:py-4 flex flex-col justify-between gap-4 font-light">
+                    <h1 class="font-semibold text-2xl">Sosial Media</h1>
+                    <p>Follow sosial media kami untuk mendapatkan informasi terbaru.</p>
+                    <a href="https://www.instagram.com/pappo.photographybontang/?hl=id" target="_blank"
+                        class="flex gap-1"><i class='bx bxl-instagram-alt bx-sm'></i>
+                        @pappo.photographybontang</a>
+                    <a href="https://www.instagram.com/pappostudio_btg/?hl=id" target="_blank" class="flex gap-1"><i
+                            class='bx bxl-instagram-alt bx-sm'></i> @pappostudio_btg</a>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-16 bg-[#52373f] text-[#ECE4DB] flex items-center justify-center">
+            <p class="font-medium">© Copyright 2023 - Pappo Studio.</p>
+        </div>
+    </footer>
+
+    <script src="assets/swiperjs/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        window.addEventListener('hashchange', (e) => {
+            history.pushState("", document.title, location.origin)
+        })
+        AOS.init()
+        const btnToggle = document.getElementById('btn-toggle')
+        const header = document.getElementById('header')
+        btnToggle.addEventListener('click', function () {
+            header.classList.toggle('bg-[#9D8189]')
+            header.classList.toggle('duration-300')
+            header.classList.toggle('transition')
+        })
+        window.addEventListener('scroll', function () {
+            header.classList.toggle('bg-[#9D8189]/90', window.scrollY > 10)
+            header.classList.toggle('shadow-lg', window.scrollY > 10)
+        })
+        let homeSwiper = new Swiper('.homeSwiper', {
+            spaceBetween: 30,
+            effect: 'fade',
+            centeredSlides: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        })
+        let serviceSwiper = new Swiper(".serviceSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 25,
+            loop: true,
+            centerSlide: true,
+            fade: true,
+            grabCursor: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // Responsive breakpoints
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                }
+            }
+
+        })
+        lightGallery(document.getElementById('port'))
+        let testiSwiper = new Swiper(".testiSwiper", {
+            loop: true,
+            centerSlide: true,
+            fade: true,
+            grabCursor: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // Responsive breakpoints
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 10
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
